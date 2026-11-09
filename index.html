@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Junelle D. Tirasol | Portfolio</title>
+  <meta name="description" content="Portfolio of Junelle D. Tirasol, BSIT student.">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.classList.add("js");
+    try { var saved = localStorage.getItem("theme"); } catch (e) {}
+    document.documentElement.dataset.theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  </script>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Back to the top">JT</a>
+    <nav id="nav" aria-label="Main">
+      <a href="#profile">Profile</a>
+      <a href="#academic">Academic</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#values">Values</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch between light and dark theme">◐</button>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="hero">
+    <div class="avatar" aria-hidden="true">JT</div>
+    <p class="hello" id="hello">Hello, I’m</p>
+    <h1>Junelle D. Tirasol</h1>
+    <p class="typed-line"><span id="typed">BSIT student</span><span class="caret" aria-hidden="true"></span></p>
+    <div class="actions">
+      <a class="btn" href="#projects">View my projects</a>
+      <a class="btn ghost" href="#profile">About me</a>
+    </div>
+  </div>
+
+  <section id="profile" class="reveal">
+    <h2>Profile</h2>
+    <div class="profile card" data-tilt>
+      <img class="photo" src="profile.jpg" width="480" height="480" alt="Photo of Junelle D. Tirasol">
+      <dl class="info">
+        <div><dt>Name</dt><dd>Junelle D. Tirasol</dd></div>
+        <div><dt>Current degree</dt><dd>Bachelor of Science in Information Technology (BSIT)</dd></div>
+        <div><dt>Address</dt><dd>123 Sample Street, Iloilo City, Philippines</dd></div>
+        <div><dt>Phone</dt><dd>0900 000 0000</dd></div>
+      </dl>
+    </div>
+    <h3>Short biography</h3>
+    <p class="essay">I am Junelle D. Tirasol, a BSIT student at the University of San Agustin in Iloilo. I chose Information Technology because it is one of the most practical fields today. Almost every business, school, and hospital depends on technology, so the skills I learn can open many career paths. I also know that IT is very demanding. It requires constant learning, patience, and careful problem solving because tools change quickly. Debugging a single error can take hours, and deadlines can be stressful. However, I see these challenges as training for real work. My main passion is solving problems with code, especially in C++. Every problem I solve makes me more confident. I want a career where my effort produces useful results, and IT gives me that chance.</p>
+  </section>
+
+  <section id="academic" class="reveal">
+    <h2>Academic Background</h2>
+    <ol class="timeline">
+      <li>
+        <h3>Oton National High School</h3>
+        <p>I graduated from Oton National High School in the STEM track.</p>
+        <span class="tag">Senior High School</span> <span class="tag">STEM track</span> <span class="tag">Graduated</span>
+      </li>
+      <li>
+        <h3>University of San Agustin, Iloilo</h3>
+        <p>I am taking a Bachelor of Science in Information Technology (BSIT) at the University of San Agustin (USA) in Iloilo, expecting to graduate in 2030.</p>
+        <span class="tag">College</span> <span class="tag">BSIT</span> <span class="tag">Expected 2030</span>
+      </li>
+    </ol>
+    <h3>Relevant coursework and practice</h3>
+    <ul class="list">
+      <li>Programming fundamentals in C++: functions, loops, and switch statements</li>
+      <li>Web technologies: building pages with HTML and CSS</li>
+    </ul>
+  </section>
+
+  <section id="achievements" class="reveal">
+    <h2>Notable Achievements</h2>
+    <div class="stat card" data-tilt>
+      <div class="num"><span data-count="94">94</span></div>
+      <p>Graduated from STEM with honors (94 GWA).</p>
+    </div>
+  </section>
+
+  <section id="skills" class="reveal">
+    <h2>Programming Languages &amp; Skill Set</h2>
+    <h3>Programming languages</h3>
+    <div class="chips">
+      <button class="chip" type="button" aria-pressed="false">C++</button>
+    </div>
+    <h3>Web technologies</h3>
+    <div class="chips">
+      <button class="chip" type="button" aria-pressed="false">HTML</button>
+      <button class="chip" type="button" aria-pressed="false">CSS</button>
+    </div>
+    <h3>Tools</h3>
+    <div class="chips">
+      <button class="chip" type="button" aria-pressed="false">GitHub</button>
+    </div>
+    <h3>Soft skills</h3>
+    <div class="chips">
+      <button class="chip" type="button" aria-pressed="false">Adaptability</button>
+      <button class="chip" type="button" aria-pressed="false">Problem Solving</button>
+      <button class="chip" type="button" aria-pressed="false">Perceptive</button>
+    </div>
+  </section>
+
+  <section id="projects" class="reveal">
+    <h2>Projects</h2>
+
+    <article class="project card">
+      <h3>Bank</h3>
+      <p>A console program for managing a bank balance. A menu lets you show your balance, deposit money, withdraw money, or exit. It rejects invalid amounts and refuses withdrawals larger than the balance.</p>
+      <dl class="facts">
+        <div><dt>Objective</dt><dd>To practice functions, loops, and input checking in C++.</dd></div>
+        <div><dt>Technologies used</dt><dd>C++ (iostream, iomanip)</dd></div>
+        <div><dt>Reference</dt><dd>Source file: Bank_practice.cpp</dd></div>
+      </dl>
+      <figure class="shot">
+        <pre><code>=========================
+          BANK           
+=========================
+1. Show Balance
+2. Deposit Money
+3. Withdraw Money
+4. Exit
+=========================
+Enter your choice:2
+ 
+Enter amount to be deposited:500
+-------------------------
+Your balance is:$500.00
+-------------------------
+
+=========================
+          BANK           
+=========================
+1. Show Balance
+2. Deposit Money
+3. Withdraw Money
+4. Exit
+=========================
+Enter your choice:3
+ 
+Enter amount to be withdrawn:200
+-------------------------
+Your balance is:$300.00
+-------------------------
+
+=========================
+          BANK           
+=========================
+1. Show Balance
+2. Deposit Money
+3. Withdraw Money
+4. Exit
+=========================
+Enter your choice:4
+ 
+Thanks for visiting!</code></pre>
+        <figcaption>Sample run: deposit 500, withdraw 200, then exit.</figcaption>
+      </figure>
+      <details>
+        <summary>View code (Bank_practice.cpp)</summary>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+void showBalance(double balance){
+    cout &lt;&lt; "-------------------------" &lt;&lt; endl;
+    cout &lt;&lt; "Your balance is:$" &lt;&lt; setprecision(2) &lt;&lt; fixed &lt;&lt; balance &lt;&lt; endl;
+    cout &lt;&lt; "-------------------------" &lt;&lt; endl &lt;&lt; endl;
+}
+
+double deposit(){
+    double amount = 0;
+
+    cout &lt;&lt; "Enter amount to be deposited:";
+    cin &gt;&gt; amount;
+
+    if(amount &gt; 0){
+        return amount;
+    }
+    else{
+        cout &lt;&lt; "That's not a valid amount:"&lt;&lt; endl;
+        return 0;
+    }
+}
+
+double withdraw(double balance){
+    double amount = 0;
+
+    cout &lt;&lt; "Enter amount to be withdrawn:";
+    cin &gt;&gt; amount;
+
+    if(amount &gt; balance){
+        cout &lt;&lt; "Insufficient funds" &lt;&lt; endl;
+        return 0;
+    }
+    else if(amount &lt; 0){
+        cout &lt;&lt; "That's not a valid amount" &lt;&lt; endl;
+        return 0;
+    }
+    else{
+        return amount;
+    }
+}
+
+int main()
+{
+    double balance = 0;
+    int choice = 0;
+
+    do{
+        cout &lt;&lt; "=========================" &lt;&lt; endl;
+        cout &lt;&lt; "          BANK           " &lt;&lt; endl;
+        cout &lt;&lt; "=========================" &lt;&lt; endl;
+        cout &lt;&lt; "1. Show Balance" &lt;&lt; endl;
+        cout &lt;&lt; "2. Deposit Money" &lt;&lt; endl;
+        cout &lt;&lt; "3. Withdraw Money" &lt;&lt; endl;
+        cout &lt;&lt; "4. Exit" &lt;&lt; endl;
+        cout &lt;&lt; "=========================" &lt;&lt; endl;
+        cout &lt;&lt; "Enter your choice:";
+        cin &gt;&gt; choice;
+        cout &lt;&lt; " " &lt;&lt; endl;
+
+        cin.clear();
+        fflush(stdin);
+
+        switch(choice){
+            case 1: showBalance(balance);
+                break;
+            case 2: balance += deposit();
+                showBalance(balance);
+                break;
+            case 3: balance -= withdraw(balance);
+                showBalance(balance);
+                break;
+            case 4: cout &lt;&lt; "Thanks for visiting!" &lt;&lt; endl;
+                break;
+            default: cout &lt;&lt; "Invalid choice" &lt;&lt; endl;
+        }
+    }while(choice != 4);
+}</code></pre>
+      </details>
+    </article>
+
+    <article class="project card">
+      <h3>Rock Paper Scissors game</h3>
+      <p>A console game where you choose rock, paper, or scissors and the computer picks at random. It shows both choices, then tells you whether you win, lose, or tie.</p>
+      <dl class="facts">
+        <div><dt>Objective</dt><dd>To practice functions, switch statements, and random numbers in C++.</dd></div>
+        <div><dt>Technologies used</dt><dd>C++ (iostream, ctime, cstdlib)</dd></div>
+        <div><dt>Reference</dt><dd>Source file: Rock_Paper_Scissors.cpp</dd></div>
+      </dl>
+      <figure class="shot">
+        <pre><code>===================================
+     ROCK PAPER SCISSORS GAME!     
+===================================
+Choose one of the following
+'r' for rock
+'p' for paper
+'s' for scissors
+Enter here:r
+ 
+Your choice:Rock
+Computer's choice:Scissors
+You win!</code></pre>
+        <figcaption>Sample run: the player chooses rock.</figcaption>
+      </figure>
+      <details>
+        <summary>View code (Rock_Paper_Scissors.cpp)</summary>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;ctime&gt;
+#include &lt;cstdlib&gt;
+using namespace std;
+
+char getUserChoice(){
+
+    char player;
+    cout &lt;&lt; "===================================" &lt;&lt; endl;
+    cout &lt;&lt; "     ROCK PAPER SCISSORS GAME!     " &lt;&lt; endl;
+    cout &lt;&lt; "===================================" &lt;&lt; endl;
+
+    do{
+        cout &lt;&lt; "Choose one of the following" &lt;&lt; endl;
+        cout &lt;&lt; "'r' for rock" &lt;&lt; endl;
+        cout &lt;&lt; "'p' for paper" &lt;&lt; endl;
+        cout &lt;&lt; "'s' for scissors" &lt;&lt; endl;
+        cout &lt;&lt; "Enter here:";
+        cin &gt;&gt; player;
+        cout &lt;&lt; " " &lt;&lt; endl;
+    }while(player != 'r' &amp;&amp; player != 'p' &amp;&amp; player != 's');
+
+    return player;
+}
+
+char getComputerChoice(){
+
+    srand(time(NULL));
+    int num = rand() % 3 + 1;
+
+    switch(num){
+        case 1: return 'r';
+        case 2: return 'p';
+        default: return 's';
+    }
+
+}
+
+void showChoice(char player_or_computer){
+
+    switch(player_or_computer){
+        case 'r': cout &lt;&lt; "Rock" &lt;&lt; endl;
+            break;
+        case 'p': cout &lt;&lt; "Paper" &lt;&lt; endl;
+            break;
+        case 's': cout &lt;&lt; "Scissors" &lt;&lt; endl;
+            break;
+    }
+}
+
+void chooseWinner(char player, char computer){
+
+    switch(player){
+        case 'r': if(computer == 'r'){
+                cout &lt;&lt; "It's a tie!" &lt;&lt; endl;
+            }
+            else if(computer == 'p'){
+                cout &lt;&lt; "You lose!" &lt;&lt; endl;
+            }
+            else{
+                cout &lt;&lt; "You win!" &lt;&lt; endl;
+            }
+            break;
+        case 'p': if(computer == 'r'){
+                cout &lt;&lt; "You win!" &lt;&lt; endl;
+            }
+            else if(computer == 'p'){
+                cout &lt;&lt; "It's a tie!" &lt;&lt; endl;
+            }
+            else{
+                cout &lt;&lt; "You lose!" &lt;&lt; endl;
+            }
+            break;
+        case 's': if(computer == 'r'){
+                cout &lt;&lt; "You lose!" &lt;&lt; endl;
+            }
+            else if(computer == 'p'){
+                cout &lt;&lt; "You win!" &lt;&lt; endl;
+            }
+            else{
+                cout &lt;&lt; "It's a tie!" &lt;&lt; endl;
+            }
+            break;
+    }
+}
+
+int main() {
+
+    char player;
+    char computer;
+
+    player = getUserChoice();
+    cout &lt;&lt; "Your choice:";
+    showChoice(player);
+
+    computer = getComputerChoice();
+    cout &lt;&lt; "Computer's choice:";
+    showChoice(computer);
+
+    chooseWinner(player, computer);
+
+}</code></pre>
+      </details>
+    </article>
+
+    <article class="project card">
+      <h3>Personal Web Portfolio</h3>
+      <p>The website you are viewing. It presents my background, academic journey, skills, and projects on one responsive page, with a light and dark theme.</p>
+      <dl class="facts">
+        <div><dt>Objective</dt><dd>To showcase my background and work as an IT student.</dd></div>
+        <div><dt>Technologies used</dt><dd>HTML, CSS, JavaScript, GitHub</dd></div>
+        <div><dt>Reference</dt><dd>This page</dd></div>
+      </dl>
+    </article>
+  </section>
+
+  <section id="values" class="reveal">
+    <h2>Work Ethics &amp; Core Values</h2>
+    <h3>Work ethics</h3>
+    <ul class="values">
+      <li class="card" data-tilt><strong>One for all</strong><span>I put the team first and share the load.</span></li>
+      <li class="card" data-tilt><strong>Team player</strong><span>I listen, communicate, and do my part.</span></li>
+      <li class="card" data-tilt><strong>Can take criticism</strong><span>I treat feedback as a way to improve.</span></li>
+      <li class="card" data-tilt><strong>Willing to learn</strong><span>I keep learning new tools and ideas.</span></li>
+      <li class="card" data-tilt><strong>Can adapt to new environments well</strong><span>I adjust quickly to new people, tools, and situations.</span></li>
+    </ul>
+    <h3>Core values</h3>
+    <ul class="values">
+      <li class="card" data-tilt><strong>Keep going forward</strong></li>
+      <li class="card" data-tilt><strong>Do not falter</strong></li>
+      <li class="card" data-tilt><strong>Don’t forget your origins</strong></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>© 2026 Junelle D. Tirasol</p>
+</footer>
+
+<button class="top-btn" id="topBtn" type="button" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
