@@ -4,18 +4,16 @@
   const root = document.documentElement;
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // 1. Theme button (light and dark, remembered next time)
+
   $("#themeBtn").addEventListener("click", () => {
     const next = root.dataset.theme === "dark" ? "light" : "dark";
     root.dataset.theme = next;
     try { localStorage.setItem("theme", next); } catch (e) {}
   });
-
-  // 2. Time-based greeting
+  
   const hour = new Date().getHours();
   $("#hello").textContent = `Good ${hour < 12 ? "morning" : hour < 18 ? "afternoon" : "evening"}, I’m`;
 
-  // 3. Typing effect in the hero
   const typed = $("#typed");
   const words = ["BSIT student", "C++ programmer", "Problem solver"];
   if (!reduce) {
@@ -37,7 +35,6 @@
     type();
   }
 
-  // 4. Scroll progress bar and back-to-top button
   const bar = $("#progress");
   const topBtn = $("#topBtn");
   const onScroll = () => {
@@ -49,7 +46,6 @@
   onScroll();
   topBtn.addEventListener("click", () => scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }));
 
-  // 5. Sections fade in, and the GWA counts up
   const countUp = (el) => {
     const end = Number(el.dataset.count);
     if (reduce) { el.textContent = end; return; }
@@ -71,7 +67,6 @@
   }, { threshold: 0.05 });
   $$(".reveal").forEach((el) => reveal.observe(el));
 
-  // 6. The menu highlights the section you are reading
   const links = $$("#nav a");
   const spy = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -80,12 +75,10 @@
   }, { rootMargin: "-45% 0px -50% 0px" });
   $$("main section").forEach((s) => spy.observe(s));
 
-  // 7. Skill chips can be tapped to light up
   $$(".chip").forEach((chip) => chip.addEventListener("click", () => {
     chip.setAttribute("aria-pressed", chip.getAttribute("aria-pressed") !== "true");
   }));
 
-  // 8. "Copy code" button inside each project
   $$("details").forEach((d) => {
     const btn = document.createElement("button");
     btn.type = "button";
@@ -106,7 +99,7 @@
     $("summary", d).after(row);
   });
 
-  // 9. Mouse only: cards tilt toward the pointer and a neon glow follows it
+
   if (matchMedia("(hover: hover) and (pointer: fine)").matches && !reduce) {
     $$("[data-tilt]").forEach((card) => {
       card.addEventListener("pointermove", (e) => {
